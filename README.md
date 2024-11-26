@@ -8,7 +8,7 @@ Group Members:
 
 ## Prediction using Optimal Stopping Theory
 
-Our main code which utilizes Optimal Stopping Theory can be found [here](Stock Price Prediction OST.ipynb)
+Our main code which utilizes Optimal Stopping Theory can be found [here](Stock_Price_Prediction_OST.ipynb)
 
 Results :- 
 
