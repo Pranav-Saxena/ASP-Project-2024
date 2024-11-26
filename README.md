@@ -1,6 +1,6 @@
 # Stock Price Prediction using Optimal Stopping Theory
 
-Code and Report for ASP Project 
+[Code](Stock_Price_Prediction_OST.ipynb) and [Report](Report.pdf) for ASP Project 
 
 Group Members:
 - Pranav Saxena (2022AAPS0257G)
@@ -14,7 +14,7 @@ Results :-
 
 ![Actual vs Prediction](assets/image.png)
 
-We get a decent result from our simulated GBM compared to actual historical data.
+The results we found seem to be accurate, with our simulated Geometric Brownian Motion (GBM) giving a good match to the actual historical data.
 
 Backtesting Results :-
 ```
@@ -22,15 +22,15 @@ Initial Balance : 10000
 Mean Final Balance: 9312.50
 Mean Return on Investment (ROI): -6.87%
 ```
-The predicted value of mean ROI seems to be accurate as the trend of HAL stock is negative recently and would ultimately result in loss, hence a negative ROI.
+The predicted value of the mean ROI appears to be accurate, as the recent trend of the HAL stock has been negative, which would ultimately result in a loss, leading to a negative ROI.
+
 
 We also tested the calculation of probability of reaching a target price within a specific time using P[Ta<t] = 2P(z > |a|/sqrt(t))
 ```
 Current Price : 2287.0
 Probability of reaching price 2500 in 36.00 days: 0.2133
 ```
-The probability seems to be accurate since the current trend of stock is negative and it resulting in a better return after 36 days has a lower probability of 0.2133
-
+The probability appears to be accurate, as the current stock trend is negative. This results in a having a lower probability of 0.2133 to get a better return.
 ## Extension to LSTM
 
 We extend our method to using LSTM for comparison. [Code](OST_LSTM.ipynb)
@@ -45,8 +45,8 @@ We can then predict future values of stock using our trained LSTM model and make
 
 ## Conclusion
 
-Using Purely SBM and Optimal Stopping Theory, we can get good results and can be used to make our trading decisions accordingly.
+Optimal Stopping Theory (OST) can be effectively applied to stock price prediction to determine the best time to enter or exit the market, optimizing profits by deciding when to 'stop' based on predicted price movements.
 
-For more accuracy, we can utilize LSTM and train it on NSE stock data but this goes beyond the scope of the course.
+For enhanced accuracy in predicting stock prices, Long Short-Term Memory (LSTM) models can be trained on historical stock data to capture long-term dependencies in price trends. Combining the predictions from LSTMs with OST can help in making informed trading decisions by identifying the optimal points to trade.
 
-Our experiments were performed on the historical data of NSE Stocks BAJAJ FINSERV and HAL
+Currently, we calculate μ and σ using log returns of stock data. However, we could further refine these estimates by employing statistical techniques like Maximum Likelihood Estimation (MLE) or GARCH models. These methods could provide more accurate estimates of μ and σ, improving the application of OST for better trading accuracy.
