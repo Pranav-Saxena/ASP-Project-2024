@@ -33,7 +33,7 @@ The probability seems to be accurate since the current trend of stock is negativ
 
 ## Extension to LSTM
 
-We extend our method to using LSTM for comparison. 
+We extend our method to using LSTM for comparison. [Code](OST_LSTM)
 
 ![LSTM](assets/lstm.png)
 
